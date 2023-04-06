@@ -61,15 +61,6 @@ class EncoderFuncs:
     def get_size(self, channels: ctypes.c_int) -> ctypes.c_int:
         ...
 
-    def create(
-        self,
-        samping_rate: ctypes.c_int,
-        channels: ctypes.c_int,
-        mode: ctypes.c_int,
-        error: c_int_ptr,
-    ) -> EncoderStructPtr:
-        ...
-
     def init(
         self,
         encoder: EncoderStructPtr,
