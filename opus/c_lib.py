@@ -37,10 +37,10 @@ from .error import OpusException
 def get_lib():
     try:
         if sys.platform == "win32":
-            _basedir = os.path.dirname(os.path.abspath(__file__))
-            _bitness = struct.calcsize("P") * 8
-            _target = "x64" if _bitness > 32 else "x86"
-            path = os.path.join(_basedir, "bin", f"libopus-0.{_target}.dll")
+            basedir = os.path.dirname(os.path.abspath(__file__))
+            bitness = struct.calcsize("P") * 8
+            target = "x64" if bitness > 32 else "x86"
+            path = os.path.join(basedir, "bin", f"libopus-0.{target}.dll")
         else:
             path = ctypes.util.find_library("opus")
     except Exception as exc:
