@@ -24,6 +24,7 @@ SOFTWARE.
 
 import ctypes
 from enum import Enum
+from typing import Literal
 
 # special C pointer types
 c_int_ptr = ctypes.POINTER(ctypes.c_int)
@@ -45,6 +46,15 @@ class SignalControl(Enum):
     AUTO = -1000
     VOICE = 3001
     MUSIC = 3002
+
+
+# TODO: add other CTLs
+class CTL(Enum):
+    SET_GAIN = 4034
+    LAST_PACKET_DURATION = 4039
+
+
+SAMPLE_RATE = Literal[8000, 12000, 16000, 24000, 48000]
 
 
 # C structs for the Encoder & Decoder

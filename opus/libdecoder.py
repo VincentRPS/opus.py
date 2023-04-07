@@ -24,7 +24,7 @@ SOFTWARE.
 
 
 import ctypes
-from typing import Sequence
+from typing import Any, Sequence
 
 from .c_lib import get_lib
 from .types import DecoderStructPtr, c_float_ptr, c_int16_ptr, c_int32_ptr, c_int_ptr
@@ -32,6 +32,9 @@ from .types import DecoderStructPtr, c_float_ptr, c_int16_ptr, c_int32_ptr, c_in
 
 class DecoderFuncs:
     def get_size(self, channels: ctypes.c_int) -> ctypes.c_int:
+        ...
+
+    def strerror(self, error: ctypes.c_int) -> ctypes.c_char:
         ...
 
     def init(
@@ -66,7 +69,9 @@ class DecoderFuncs:
     ) -> DecoderStructPtr:
         ...
 
-    def ctl(self, decoder: DecoderStructPtr, request: ctypes.c_int) -> ctypes.c_int:
+    def ctl(
+        self, decoder: DecoderStructPtr, request: ctypes.c_int, *args: Any
+    ) -> ctypes.c_int:
         ...
 
     def destroy(self, decoder: DecoderStructPtr) -> None:

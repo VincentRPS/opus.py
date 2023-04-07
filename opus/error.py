@@ -29,3 +29,20 @@ class OpusException(Exception):
 
 class CException(Exception):
     """An error raised by, or related to, the C library."""
+
+
+def raise_c_err(num: int) -> None:
+    if num == -1:
+        raise CException("Bad Argument")
+    elif num == -2:
+        raise CException("Buffer too small")
+    elif num == -3:
+        raise CException("Internal Error")
+    elif num == -4:
+        raise CException("Invalid Packet")
+    elif num == -5:
+        raise CException("Unimplemented")
+    elif num == -6:
+        raise CException("Invalid State")
+    elif num == -7:
+        raise CException("Allocation Failed")

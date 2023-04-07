@@ -32,6 +32,9 @@ from .types import EncoderStructPtr, c_float_ptr, c_int16_ptr, c_int32_ptr, c_in
 class EncoderFuncs:
     """Typing for libopus encoder functions."""
 
+    def strerror(self, error: ctypes.c_int) -> ctypes.c_char:
+        ...
+
     def encode(
         self,
         encoder: EncoderStructPtr,

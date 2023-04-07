@@ -24,41 +24,39 @@ SOFTWARE.
 
 import setuptools
 
-__version__ = '0.1.0'
+__version__ = "0.1.0"
 
-packages = [
-    'opus'
-]
+packages = ["opus"]
 
 setuptools.setup(
-    name='opus',
+    name="opus",
     version=__version__,
     packages=packages,
     package_data={
-        'opus': ['bin/*.dll'],
+        "opus": ["bin/*.dll"],
     },
     project_urls={
-        'Issue Tracker': 'https://github.com/VincentRPS/opus.py/issues',
-        'Pull Request Tracker': 'https://github.com/VincentRPS/opus.py/pulls',
+        "Issue Tracker": "https://github.com/VincentRPS/opus.py/issues",
+        "Pull Request Tracker": "https://github.com/VincentRPS/opus.py/pulls",
     },
-    url='https://github.com/VincentRPS/opus.py',
-    license='MIT',
-    author='VincentRPS',
-    long_description=open('README.md').read(),
-    long_description_content_type='text/markdown',
+    url="https://github.com/VincentRPS/opus.py",
+    license="MIT",
+    author="VincentRPS",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     description="Python's libopus wrapper",
-    python_requires='>=3.10',
+    python_requires=">=3.10",
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'License :: OSI Approved :: MIT License',
-        'Intended Audience :: Developers',
-        'Natural Language :: English',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.11',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: Implementation :: CPython',
-        'Topic :: Software Development :: Libraries',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-        'Topic :: Utilities',
+        "Development Status :: 2 - Pre-Alpha",
+        "License :: OSI Approved :: MIT License",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Topic :: Software Development :: Libraries",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Utilities",
     ],
 )
