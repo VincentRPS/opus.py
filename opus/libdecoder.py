@@ -149,7 +149,7 @@ class LibDecoder(DecoderFuncs):
         "opus_decoder",
         "opus_decoder_get_samples_per_frame",
         "opus_packet_parse",
-        "ops_packet_get_bandwidth",
+        "opus_packet_get_bandwidth",
         "opus_packet_get_nb_channels",
         "opus_packet_get_nb_frames",
         "opus_packet_get_nb_samples",
